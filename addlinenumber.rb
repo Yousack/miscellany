@@ -19,7 +19,7 @@ loop do
 end
 
 File.open(filename) { |r|
-  File.open("#{filename}_numbered.txt", 'a') { |w|
+  File.open("#{File.basename(filename, '.*')}_numbered.txt", 'w') { |w|
     if n == 1
       w.write("学籍番号：#{studentid}　名前：#{name}\n\n")
     end
