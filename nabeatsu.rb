@@ -1,14 +1,14 @@
 n = gets.to_i
 
-n.times do |i|
+1.upto n do |i|
 
-  if (i+1)%15 == 0
-    puts("#{i+1}アホワン!")
-  elsif (i+1)%5 == 0
-    puts("#{i+1}ワン")
-  elsif (i+1)%3 == 0 || (i+1).to_s.include?("3")
-    puts("#{i+1}アホ!")
+  if i%15 == 0
+    puts("#{i}アホワン!")
+  elsif i%5 == 0
+    puts("#{i}ワン")
+  elsif i%3 == 0 || (i+1).to_s.include?("3")
+    puts("#{i}アホ!")
   else
-    puts("#{i+1}")
+    puts("#{i}")
   end
 end
